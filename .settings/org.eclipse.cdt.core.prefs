@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.317832107/STAGING_DIR/delimiter=\:
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.317832107/STAGING_DIR/operation=append
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.317832107/STAGING_DIR/value=/home/letuan/Documents/OpenWrt-SDK-ramips-mt7688_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64/staging_dir
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.317832107/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.317832107/appendContributed=true
