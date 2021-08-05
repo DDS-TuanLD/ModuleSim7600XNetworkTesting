@@ -186,7 +186,7 @@ bool UartDataHandler::_mqtt_filter(string cmd){
         cmd.pop_back();
         mqtt_topic = cmd;
         mqtt_topic_incomming = false;
-        return true; 	cout << "data receive before send in to queue: " << buf << endl;
+        return true;
 
     }
 
