@@ -243,7 +243,6 @@ bool UartDataHandler::_http_filter(string cmd){
     }
 
     if(cmd.find("+HTTPREAD: 0") != string::npos){
-    	cout << "jhdjhdfkjdf" << endl;
 
         this->ob->publish(HTTP_DATA_TITLE, http_body_data);
 

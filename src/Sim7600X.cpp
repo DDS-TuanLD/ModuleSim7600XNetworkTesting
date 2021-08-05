@@ -26,7 +26,7 @@ bool exhibit_flag = true;
 
 pthread_mutex_t myMutex;
 
-ITransport* uart = new Uart("/dev/ttyUSB0");
+ITransport* uart = new Uart("/dev/ttyS1");
 
 ICommand* at = new AtCommand(uart);
 
@@ -182,7 +182,7 @@ int main(){
     pthread_t thread3;
     pthread_t thread4;
     pthread_t thread5;
-    pthread_t thread6;
+//    pthread_t thread6;
 //    pthread_t thread7;
 
     pthread_create(&thread1, NULL, uart_receive_data, NULL);
@@ -190,7 +190,7 @@ int main(){
     pthread_create(&thread3, NULL, mqtt_handler_data, NULL);
     pthread_create(&thread4, NULL, http_handler_data, NULL);
     pthread_create(&thread5, NULL, test_case, NULL);
-    pthread_create(&thread6, NULL, internet_heartbeat, NULL);
+//    pthread_create(&thread6, NULL, internet_heartbeat, NULL);
 //    pthread_create(&thread7, NULL, sim_insert_checking, NULL);
 
     System_init();
@@ -200,7 +200,7 @@ int main(){
     pthread_join(thread3, NULL);
     pthread_join(thread4, NULL);
     pthread_join(thread5, NULL);
-    pthread_join(thread6, NULL);
+//    pthread_join(thread6, NULL);
 //    pthread_join(thread7, NULL);
 
     pthread_mutex_destroy(&myMutex);
