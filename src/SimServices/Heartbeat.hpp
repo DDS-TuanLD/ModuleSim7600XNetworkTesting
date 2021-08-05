@@ -27,19 +27,11 @@ int Heartbeat:: disconnect_count = 0;
 
 bool Heartbeat:: check_sim_insert(){
     bool is_inserted = this->command->send_with_response_checking(" AT+CICCID\r\n", "+ICCID: ", 0);
-//    if(!is_inserted){
-//        this->simcard_insert_state = false;
-//        return false;
-//    }
-//    if((is_inserted)&&(this->simcard_insert_state == false)){
-//        this->simcard_insert_state = true;
-//        return true;
-//    }
     return is_inserted;
 }
 
 void Heartbeat:: ping_to_internet(){
-    int is_connect = this->command->send_with_response_checking("AT+CPING=\"www.google.com\",1,4,64,1000,10000, 255\r\n", "+CPING: 3,3,3,0", 0);
+    int is_connect = this->command->send_with_response_checking("AT+CPING=\"www.google.com\",1,3,64,1000,10000, 255\r\n", "+CPING: 3,3,3,0", 3000000);
     if(is_connect){
         this->disconnect_count = 0;
     }

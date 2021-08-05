@@ -62,7 +62,7 @@ void UartDataHandler::set_last_command(string command){
 void UartDataHandler::receive_uart_data()
 {
     int i;
-    char temp[100];
+    char temp[100] = {0};
     this->trans->receive(temp, sizeof(temp));
     int count = strlen(temp);
     if(count == 0){
@@ -243,6 +243,7 @@ bool UartDataHandler::_http_filter(string cmd){
     }
 
     if(cmd.find("+HTTPREAD: 0") != string::npos){
+    	cout << "jhdjhdfkjdf" << endl;
 
         this->ob->publish(HTTP_DATA_TITLE, http_body_data);
 
